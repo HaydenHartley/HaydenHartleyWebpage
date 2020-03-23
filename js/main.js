@@ -12,12 +12,13 @@ function loadImage(id, targetId) {
     if (imageToLoad) {
         var img = new Image();
         img.src = imageToLoad;
-        img.onload = function() {
+        img.onload = function () {
             targetEl.classList.add('is-loaded');
         };
     }
 }
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function () {
     loadImage('wallpaper');
     loadImage('pictureImage', 'picture');
 });
